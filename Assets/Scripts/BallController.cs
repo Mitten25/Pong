@@ -21,7 +21,6 @@ public class BallController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        print(collision.transform.name);
         if(collision.transform.name == "floor" || collision.transform.name == "boundary1" || collision.transform.name == "boundary2")
         {
             this.transform.position = reset;

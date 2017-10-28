@@ -23,11 +23,7 @@ public class PaddleController : MonoBehaviour {
         //movement
         float translation = Input.GetAxis("Horizontal");
         rb.AddForce(new Vector3(translation, 0, 0) * speed);
-
-        //hit
-        //float hit = Input.GetAxis("Jump");
-        //print(hit);
-        //rb.AddForce(new Vector3(0, hit, 0) * hitforce);
+        
         if (Input.GetAxis("Jump") > 0 && inhit == false)
         {
             inhit = true;
@@ -43,8 +39,5 @@ public class PaddleController : MonoBehaviour {
         {
             rb.transform.position = new Vector3(rb.transform.position.x, 0, rb.transform.position.y);
         }
-
-
-
 	}
 }
